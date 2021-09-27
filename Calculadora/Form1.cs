@@ -56,7 +56,7 @@ namespace Calculadora
 
             /// En caso de que hayamos hehco una operacion y queramos continuar
             else if (acumulador != "" && resultado != "") 
-            { 
+            {
                 labelResult.Text = resultado + " " + BtnOperador;
             }
 
@@ -104,9 +104,7 @@ namespace Calculadora
         /// la operacion en cuestion.
         private void btn_igual(object sender, EventArgs e)
         {
-
             changeLabelResult(boton_igual.Text);
-
             
             if (resultado == "")
             { /// Se ejecuta cuando obtenemos un primer resultado.
@@ -122,8 +120,8 @@ namespace Calculadora
 
                 calculateOperation(
                     operador, 
-                    System.Convert.ToInt32(resultado),
-                    System.Convert.ToInt32(contador)
+                    System.Convert.ToSingle(resultado),
+                    System.Convert.ToSingle(contador)
                 );
             }
             contador = ""; /// Permite escribir nuevamente un numero de 0.
@@ -138,38 +136,38 @@ namespace Calculadora
         /// la operacion en si.
         private void btn_suma(object sender, EventArgs e)
         {
-            if (contador != "") ///Evitamos poder poner primero un operador.
-            {
+           //if (contador.Length > 1 ) ///Evitamos poder poner primero un operador.
+           //{
               changeLabelResult(boton_suma.Text);
               operador = boton_suma.Text;
-            }
+           //}
         }
 
         private void btn_resta(object sender, EventArgs e)
         {
-            if (contador != "") ///Evitamos poder poner primero un operador.
-            {
-                changeLabelResult(boton_resta.Text);
+            //if (contador != "") ///Evitamos poder poner primero un operador.
+            //{
+              changeLabelResult(boton_resta.Text);
               operador = boton_resta.Text;
-            }
+            //}
         }
 
         private void btn_multipli(object sender, EventArgs e)
         {
-            if (contador != "") ///Evitamos poder poner primero un operador.
-            {
+            //if (contador != "") ///Evitamos poder poner primero un operador.
+            //{
                 changeLabelResult(boton_multi.Text);
                 operador = boton_multi.Text;
-            }
+            //}
         }
 
         private void btn_division(object sender, EventArgs e)
         {
-            if (contador != "") ///Evitamos poder poner primero un operador.
-            {
+            //if (contador != "") ///Evitamos poder poner primero un operador.
+           // {
                 changeLabelResult(boton_division.Text);
                 operador = boton_division.Text;
-            }
+            //}
         }
 
 
@@ -233,6 +231,27 @@ namespace Calculadora
             {
                 changeLabelContador(boton_coma.Text);
             }
+        }
+
+        private void btn_delete(object sender, EventArgs e )
+        {
+            if (contador.Length != 0)
+            {
+                contador = contador.Remove(contador.Length - 1);
+                labelContador.Text = contador;
+            }
+        }
+        private void btn_clear(object sender, EventArgs e)
+        {
+            contador = "";
+            acumulador = "";
+
+            primerNumero = 0;
+            segundoNumero = 0;
+            operador = "";
+            resultado = "";
+            labelContador.Text = "0";
+            labelResult.Text = "";
         }
     }
 }

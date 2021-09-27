@@ -116,6 +116,7 @@ namespace Calculadora
             this.boton_delete.Text = "⩤";
             this.boton_delete.UseVisualStyleBackColor = false;
             this.boton_delete.UseWaitCursor = true;
+            this.boton_delete.Click += new System.EventHandler(this.btn_delete);
             // 
             // boton_clear
             // 
@@ -130,6 +131,7 @@ namespace Calculadora
             this.boton_clear.Text = "C";
             this.boton_clear.UseVisualStyleBackColor = false;
             this.boton_clear.UseWaitCursor = true;
+            this.boton_clear.Click += new System.EventHandler(this.btn_clear);
             // 
             // labelContador
             // 
@@ -139,6 +141,7 @@ namespace Calculadora
             this.labelContador.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.labelContador.Size = new System.Drawing.Size(163, 40);
             this.labelContador.TabIndex = 14;
+            this.labelContador.Text = "0";
             this.labelContador.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.labelContador.UseWaitCursor = true;
             // 
