@@ -362,6 +362,7 @@ namespace Calculadora
             this.boton_coma.Text = ",";
             this.boton_coma.UseVisualStyleBackColor = false;
             this.boton_coma.UseWaitCursor = true;
+            this.boton_coma.Click += new System.EventHandler(this.btn_coma);
             // 
             // boton_0
             // 

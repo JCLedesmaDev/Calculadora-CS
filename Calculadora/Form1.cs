@@ -19,13 +19,14 @@ namespace Calculadora
         string contador = "";
         string acumulador = "";
 
-        int primerNumero = 0;
-        int segundoNumero = 0;
+        float primerNumero = 0;
+        float segundoNumero = 0;
         string operador = "";
+        string resultado = "";
 
 
         /// METODOS GLOBALES
-       
+
         /// 1) Metodo que permite plasmar el valor del boton en el primer label.
         private void changeLabelContador(string BtnText) {
             if (acumulador != ""){ /// Si ya hemos escrito algo previamente, nos borrara el contenido y escribira lo nuevo.
@@ -38,95 +39,142 @@ namespace Calculadora
         /// 2) Metodo que permite plasmar el contenido del "labelContador", en el "labelResultado" junto al signo elegido.
         private void changeLabelResult( string BtnOperador)
         {
+            /// Se valida aca, cuando ingresamos el primer numero de la primera operacion
             if (acumulador == "")
             {
                 /// Si valida aca, es porque hemos puesto el primer numero
                 acumulador = contador + " " + BtnOperador;
 
-                /// Convertimos el primer valor en numero y lo almacenamos (para realizar operacion)
-                primerNumero = System.Convert.ToInt32(contador);
+                /// Convertimos el primer valor en numero flotante
+                /// y lo almacenamos (para realizar operacion)
+                primerNumero = System.Convert.ToSingle(contador);
 
                 /// Mostramos en pantalla.
                 labelResult.Text = acumulador;
-                contador = "";
+                contador = ""; /// Permite escribir nuevamente un numero de 0.
             }
+
+            /// En caso de que hayamos hehco una operacion y queramos continuar
+            else if (acumulador != "" && resultado != "") 
+            { 
+                labelResult.Text = resultado + " " + BtnOperador;
+            }
+
+            /// Se valida aca, cuando ingresamos el segundo numero de la primera operacion
             else
             {
-                /// Si valida aca, es porque hemos puesto el segundo numero
                 acumulador = acumulador + " " + contador + " " + BtnOperador;
 
-                /// Convertimos el 2do numero a numero.
-                segundoNumero = System.Convert.ToInt32(contador);
+                /// Convertimos el 2do numero a numero flotante.
+                segundoNumero = System.Convert.ToSingle(contador);
 
                 /// Mostramos en pantalla.
                 labelResult.Text = acumulador;
+                contador = ""; /// Permite escribir nuevamente un numero de 0.
             }
         }
 
         /// 3) Metodo que realiza la operacion en cuesiton.
-        private string calculateOperation ( string Operator)
+        private void calculateOperation ( string Operator, float numero1, float numero2)
         {
-            string resultado = "";
             switch (Operator)
             {
                 case "➕":
-                    resultado = System.Convert.ToString(primerNumero + segundoNumero);
+                    resultado = System.Convert.ToString(numero1 + numero2);
                     break;
                 case "➖":
-                    resultado = System.Convert.ToString(primerNumero - segundoNumero);
+                    resultado = System.Convert.ToString(numero1 - numero2);
                     break;
 
                 case "✖":
-                    resultado = System.Convert.ToString(primerNumero * segundoNumero);
+                    resultado = System.Convert.ToString(numero1 * numero2);
                     break;
 
                 case "➗":
-                    resultado = System.Convert.ToString(primerNumero / segundoNumero);
+                    resultado = System.Convert.ToString(numero1 / numero2);
                     break;
 
                 default:
                     break;
             }
-
-            return resultado;
         }
 
 
-        /// TODOS LOS METODOS DE ABAJO, SON DE LOS BOTONES QUE EJECUTAN LOS METODOS GLOBALES DE ARRIBA.
-
-        /// METODOS BOTONES OPERADORES
+        /// 3) Dicho boton, ejecuta el METODO GLOBAL "changeLabelResult" para realizar toda
+        /// la operacion en cuestion.
         private void btn_igual(object sender, EventArgs e)
         {
+
             changeLabelResult(boton_igual.Text);
-            labelContador.Text = calculateOperation(operador);
+
+            
+            if (resultado == "")
+            { /// Se ejecuta cuando obtenemos un primer resultado.
+                calculateOperation(
+                    operador, 
+                    primerNumero, 
+                    segundoNumero
+                );
+            }
+            else
+            { /// Se ejecuta cuando sumamos un valor al resultado ya obtenido.
+                labelResult.Text = resultado + " " + operador + " " + contador + " " + boton_igual.Text ;
+
+                calculateOperation(
+                    operador, 
+                    System.Convert.ToInt32(resultado),
+                    System.Convert.ToInt32(contador)
+                );
+            }
+            contador = ""; /// Permite escribir nuevamente un numero de 0.
+            labelContador.Text = resultado;
         }
 
+
+        /// 2) Los siguientes 4 metodos, utilizan un METODO GLOBAL "changeLabelResult"
+        /// el cual, plasma dentro del "labelResult", el contenido del "labelContador"
+        /// sumado del signo de operacion.
+        /// Tambien determina el valor del "operador", que nos servira para ejecutar 
+        /// la operacion en si.
         private void btn_suma(object sender, EventArgs e)
         {
-            changeLabelResult(boton_suma.Text);
-            operador = boton_suma.Text;
+            if (contador != "") ///Evitamos poder poner primero un operador.
+            {
+              changeLabelResult(boton_suma.Text);
+              operador = boton_suma.Text;
+            }
         }
 
         private void btn_resta(object sender, EventArgs e)
         {
-            changeLabelResult(boton_resta.Text);
-            operador = boton_resta.Text;
+            if (contador != "") ///Evitamos poder poner primero un operador.
+            {
+                changeLabelResult(boton_resta.Text);
+              operador = boton_resta.Text;
+            }
         }
 
         private void btn_multipli(object sender, EventArgs e)
         {
-            changeLabelResult(boton_multi.Text);
-            operador = boton_multi.Text;
+            if (contador != "") ///Evitamos poder poner primero un operador.
+            {
+                changeLabelResult(boton_multi.Text);
+                operador = boton_multi.Text;
+            }
         }
 
         private void btn_division(object sender, EventArgs e)
         {
-            changeLabelResult(boton_division.Text);
-            operador = boton_division.Text;
+            if (contador != "") ///Evitamos poder poner primero un operador.
+            {
+                changeLabelResult(boton_division.Text);
+                operador = boton_division.Text;
+            }
         }
 
 
-        /// METODOS BOTONES NUMERICOS
+        /// 1) Cada boton numerico, utilizara un METODO GLOBAL "changeLabelContador" 
+        /// el cual servira para plasmar su valor numerico en el labelContador.
         private void btn_0(object sender, EventArgs e)
         {
             changeLabelContador(boton_0.Text);
@@ -176,6 +224,15 @@ namespace Calculadora
         {
             changeLabelContador(boton_9.Text);
         }
-
+            
+        private void btn_coma(object sender, EventArgs e)
+        {
+            ///Si el contador, NO posee una "," (Debido a que ya pusimos una antes)
+            /// no pondra otra coma mas.
+            if (!contador.Contains(","))
+            {
+                changeLabelContador(boton_coma.Text);
+            }
+        }
     }
 }
