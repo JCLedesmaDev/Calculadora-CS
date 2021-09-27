@@ -30,27 +30,27 @@ namespace Calculadora
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.result = new System.Windows.Forms.Label();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.boton_div = new System.Windows.Forms.Button();
+            this.boton_delete = new System.Windows.Forms.Button();
+            this.boton_clear = new System.Windows.Forms.Button();
+            this.labelContador = new System.Windows.Forms.Label();
+            this.labelResult = new System.Windows.Forms.Label();
+            this.boton_multi = new System.Windows.Forms.Button();
+            this.boton_resta = new System.Windows.Forms.Button();
+            this.boton_9 = new System.Windows.Forms.Button();
+            this.boton_6 = new System.Windows.Forms.Button();
+            this.boton_8 = new System.Windows.Forms.Button();
+            this.boton_5 = new System.Windows.Forms.Button();
+            this.boton_7 = new System.Windows.Forms.Button();
+            this.boton_4 = new System.Windows.Forms.Button();
+            this.boton_suma = new System.Windows.Forms.Button();
+            this.boton_3 = new System.Windows.Forms.Button();
+            this.boton_2 = new System.Windows.Forms.Button();
+            this.boton_1 = new System.Windows.Forms.Button();
+            this.boton_igual = new System.Windows.Forms.Button();
+            this.boton_coma = new System.Windows.Forms.Button();
+            this.boton_0 = new System.Windows.Forms.Button();
+            this.boton_negacion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,338 +60,341 @@ namespace Calculadora
             this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button17);
-            this.panel1.Controls.Add(this.button18);
-            this.panel1.Controls.Add(this.button19);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.result);
-            this.panel1.Controls.Add(this.button13);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button14);
-            this.panel1.Controls.Add(this.button10);
-            this.panel1.Controls.Add(this.button15);
-            this.panel1.Controls.Add(this.button11);
-            this.panel1.Controls.Add(this.button16);
-            this.panel1.Controls.Add(this.button12);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.boton_div);
+            this.panel1.Controls.Add(this.boton_delete);
+            this.panel1.Controls.Add(this.boton_clear);
+            this.panel1.Controls.Add(this.labelContador);
+            this.panel1.Controls.Add(this.labelResult);
+            this.panel1.Controls.Add(this.boton_multi);
+            this.panel1.Controls.Add(this.boton_resta);
+            this.panel1.Controls.Add(this.boton_9);
+            this.panel1.Controls.Add(this.boton_6);
+            this.panel1.Controls.Add(this.boton_8);
+            this.panel1.Controls.Add(this.boton_5);
+            this.panel1.Controls.Add(this.boton_7);
+            this.panel1.Controls.Add(this.boton_4);
+            this.panel1.Controls.Add(this.boton_suma);
+            this.panel1.Controls.Add(this.boton_3);
+            this.panel1.Controls.Add(this.boton_2);
+            this.panel1.Controls.Add(this.boton_1);
+            this.panel1.Controls.Add(this.boton_igual);
+            this.panel1.Controls.Add(this.boton_coma);
+            this.panel1.Controls.Add(this.boton_0);
+            this.panel1.Controls.Add(this.boton_negacion);
             this.panel1.Location = new System.Drawing.Point(121, 115);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(189, 236);
             this.panel1.TabIndex = 0;
             this.panel1.UseWaitCursor = true;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button17
+            // boton_div
             // 
-            this.button17.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button17.CausesValidation = false;
-            this.button17.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button17.Location = new System.Drawing.Point(136, 87);
-            this.button17.Margin = new System.Windows.Forms.Padding(1);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(40, 25);
-            this.button17.TabIndex = 18;
-            this.button17.Text = "➗";
-            this.button17.UseVisualStyleBackColor = false;
-            this.button17.UseWaitCursor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.boton_div.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.boton_div.CausesValidation = false;
+            this.boton_div.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_div.Location = new System.Drawing.Point(136, 87);
+            this.boton_div.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_div.Name = "boton_div";
+            this.boton_div.Size = new System.Drawing.Size(40, 25);
+            this.boton_div.TabIndex = 18;
+            this.boton_div.Text = "➗";
+            this.boton_div.UseVisualStyleBackColor = false;
+            this.boton_div.UseWaitCursor = true;
             // 
-            // button18
+            // boton_delete
             // 
-            this.button18.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button18.CausesValidation = false;
-            this.button18.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button18.Location = new System.Drawing.Point(94, 87);
-            this.button18.Margin = new System.Windows.Forms.Padding(1);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(40, 25);
-            this.button18.TabIndex = 17;
-            this.button18.Text = "⩤";
-            this.button18.UseVisualStyleBackColor = false;
-            this.button18.UseWaitCursor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.boton_delete.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.boton_delete.CausesValidation = false;
+            this.boton_delete.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_delete.Location = new System.Drawing.Point(94, 87);
+            this.boton_delete.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_delete.Name = "boton_delete";
+            this.boton_delete.Size = new System.Drawing.Size(40, 25);
+            this.boton_delete.TabIndex = 17;
+            this.boton_delete.Text = "⩤";
+            this.boton_delete.UseVisualStyleBackColor = false;
+            this.boton_delete.UseWaitCursor = true;
             // 
-            // button19
+            // boton_clear
             // 
-            this.button19.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button19.CausesValidation = false;
-            this.button19.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button19.Location = new System.Drawing.Point(53, 87);
-            this.button19.Margin = new System.Windows.Forms.Padding(1);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(40, 25);
-            this.button19.TabIndex = 16;
-            this.button19.Text = "C";
-            this.button19.UseVisualStyleBackColor = false;
-            this.button19.UseWaitCursor = true;
+            this.boton_clear.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.boton_clear.CausesValidation = false;
+            this.boton_clear.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_clear.Location = new System.Drawing.Point(53, 87);
+            this.boton_clear.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_clear.Name = "boton_clear";
+            this.boton_clear.Size = new System.Drawing.Size(40, 25);
+            this.boton_clear.TabIndex = 16;
+            this.boton_clear.Text = "C";
+            this.boton_clear.UseVisualStyleBackColor = false;
+            this.boton_clear.UseWaitCursor = true;
             // 
-            // label1
+            // labelContador
             // 
-            this.label1.BackColor = System.Drawing.Color.PowderBlue;
-            this.label1.Location = new System.Drawing.Point(13, 34);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.label1.Size = new System.Drawing.Size(163, 40);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Operacio";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.label1.UseWaitCursor = true;
+            this.labelContador.BackColor = System.Drawing.Color.PowderBlue;
+            this.labelContador.Location = new System.Drawing.Point(13, 34);
+            this.labelContador.Name = "labelContador";
+            this.labelContador.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.labelContador.Size = new System.Drawing.Size(163, 40);
+            this.labelContador.TabIndex = 14;
+            this.labelContador.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.labelContador.UseWaitCursor = true;
             // 
-            // result
+            // labelResult
             // 
-            this.result.BackColor = System.Drawing.Color.LightBlue;
-            this.result.Location = new System.Drawing.Point(13, 16);
-            this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(163, 18);
-            this.result.TabIndex = 13;
-            this.result.Text = "Resultado";
-            this.result.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.result.UseWaitCursor = true;
-            this.result.Click += new System.EventHandler(this.result_Click);
+            this.labelResult.BackColor = System.Drawing.Color.LightBlue;
+            this.labelResult.Location = new System.Drawing.Point(13, 16);
+            this.labelResult.Name = "labelResult";
+            this.labelResult.Size = new System.Drawing.Size(163, 18);
+            this.labelResult.TabIndex = 13;
+            this.labelResult.Text = "Resultado";
+            this.labelResult.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelResult.UseWaitCursor = true;
             // 
-            // button13
+            // boton_multi
             // 
-            this.button13.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button13.CausesValidation = false;
-            this.button13.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button13.Location = new System.Drawing.Point(136, 114);
-            this.button13.Margin = new System.Windows.Forms.Padding(1);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(40, 25);
-            this.button13.TabIndex = 7;
-            this.button13.Text = "✖";
-            this.button13.UseVisualStyleBackColor = false;
-            this.button13.UseWaitCursor = true;
+            this.boton_multi.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.boton_multi.CausesValidation = false;
+            this.boton_multi.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_multi.Location = new System.Drawing.Point(136, 114);
+            this.boton_multi.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_multi.Name = "boton_multi";
+            this.boton_multi.Size = new System.Drawing.Size(40, 25);
+            this.boton_multi.TabIndex = 7;
+            this.boton_multi.Text = "✖";
+            this.boton_multi.UseVisualStyleBackColor = false;
+            this.boton_multi.UseWaitCursor = true;
             // 
-            // button9
+            // boton_resta
             // 
-            this.button9.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button9.CausesValidation = false;
-            this.button9.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button9.Location = new System.Drawing.Point(136, 141);
-            this.button9.Margin = new System.Windows.Forms.Padding(1);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(40, 25);
-            this.button9.TabIndex = 11;
-            this.button9.Text = "➖";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.UseWaitCursor = true;
+            this.boton_resta.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.boton_resta.CausesValidation = false;
+            this.boton_resta.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_resta.Location = new System.Drawing.Point(136, 141);
+            this.boton_resta.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_resta.Name = "boton_resta";
+            this.boton_resta.Size = new System.Drawing.Size(40, 25);
+            this.boton_resta.TabIndex = 11;
+            this.boton_resta.Text = "➖";
+            this.boton_resta.UseVisualStyleBackColor = false;
+            this.boton_resta.UseWaitCursor = true;
             // 
-            // button14
+            // boton_9
             // 
-            this.button14.BackColor = System.Drawing.SystemColors.Menu;
-            this.button14.CausesValidation = false;
-            this.button14.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button14.Location = new System.Drawing.Point(95, 114);
-            this.button14.Margin = new System.Windows.Forms.Padding(1);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(40, 25);
-            this.button14.TabIndex = 6;
-            this.button14.Text = "9";
-            this.button14.UseVisualStyleBackColor = false;
-            this.button14.UseWaitCursor = true;
+            this.boton_9.BackColor = System.Drawing.SystemColors.Menu;
+            this.boton_9.CausesValidation = false;
+            this.boton_9.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_9.Location = new System.Drawing.Point(95, 114);
+            this.boton_9.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_9.Name = "boton_9";
+            this.boton_9.Size = new System.Drawing.Size(40, 25);
+            this.boton_9.TabIndex = 6;
+            this.boton_9.Text = "9";
+            this.boton_9.UseVisualStyleBackColor = false;
+            this.boton_9.UseWaitCursor = true;
+            this.boton_9.Click += new System.EventHandler(this.btn_9);
             // 
-            // button10
+            // boton_6
             // 
-            this.button10.BackColor = System.Drawing.SystemColors.Menu;
-            this.button10.CausesValidation = false;
-            this.button10.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button10.Location = new System.Drawing.Point(95, 141);
-            this.button10.Margin = new System.Windows.Forms.Padding(1);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(40, 25);
-            this.button10.TabIndex = 10;
-            this.button10.Text = "6";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.UseWaitCursor = true;
+            this.boton_6.BackColor = System.Drawing.SystemColors.Menu;
+            this.boton_6.CausesValidation = false;
+            this.boton_6.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_6.Location = new System.Drawing.Point(95, 141);
+            this.boton_6.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_6.Name = "boton_6";
+            this.boton_6.Size = new System.Drawing.Size(40, 25);
+            this.boton_6.TabIndex = 10;
+            this.boton_6.Text = "6";
+            this.boton_6.UseVisualStyleBackColor = false;
+            this.boton_6.UseWaitCursor = true;
+            this.boton_6.Click += new System.EventHandler(this.btn_6);
             // 
-            // button15
+            // boton_8
             // 
-            this.button15.BackColor = System.Drawing.SystemColors.Menu;
-            this.button15.CausesValidation = false;
-            this.button15.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button15.Location = new System.Drawing.Point(53, 114);
-            this.button15.Margin = new System.Windows.Forms.Padding(1);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(40, 25);
-            this.button15.TabIndex = 5;
-            this.button15.Text = "8";
-            this.button15.UseVisualStyleBackColor = false;
-            this.button15.UseWaitCursor = true;
+            this.boton_8.BackColor = System.Drawing.SystemColors.Menu;
+            this.boton_8.CausesValidation = false;
+            this.boton_8.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_8.Location = new System.Drawing.Point(53, 114);
+            this.boton_8.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_8.Name = "boton_8";
+            this.boton_8.Size = new System.Drawing.Size(40, 25);
+            this.boton_8.TabIndex = 5;
+            this.boton_8.Text = "8";
+            this.boton_8.UseVisualStyleBackColor = false;
+            this.boton_8.UseWaitCursor = true;
+            this.boton_8.Click += new System.EventHandler(this.btn_8);
             // 
-            // button11
+            // boton_5
             // 
-            this.button11.BackColor = System.Drawing.SystemColors.Menu;
-            this.button11.CausesValidation = false;
-            this.button11.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button11.Location = new System.Drawing.Point(53, 141);
-            this.button11.Margin = new System.Windows.Forms.Padding(1);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(40, 25);
-            this.button11.TabIndex = 9;
-            this.button11.Text = "5";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.UseWaitCursor = true;
+            this.boton_5.BackColor = System.Drawing.SystemColors.Menu;
+            this.boton_5.CausesValidation = false;
+            this.boton_5.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_5.Location = new System.Drawing.Point(53, 141);
+            this.boton_5.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_5.Name = "boton_5";
+            this.boton_5.Size = new System.Drawing.Size(40, 25);
+            this.boton_5.TabIndex = 9;
+            this.boton_5.Text = "5";
+            this.boton_5.UseVisualStyleBackColor = false;
+            this.boton_5.UseWaitCursor = true;
+            this.boton_5.Click += new System.EventHandler(this.btn_5);
             // 
-            // button16
+            // boton_7
             // 
-            this.button16.BackColor = System.Drawing.SystemColors.Menu;
-            this.button16.CausesValidation = false;
-            this.button16.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button16.Location = new System.Drawing.Point(11, 114);
-            this.button16.Margin = new System.Windows.Forms.Padding(1);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(40, 25);
-            this.button16.TabIndex = 4;
-            this.button16.Text = "7";
-            this.button16.UseVisualStyleBackColor = false;
-            this.button16.UseWaitCursor = true;
+            this.boton_7.BackColor = System.Drawing.SystemColors.Menu;
+            this.boton_7.CausesValidation = false;
+            this.boton_7.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_7.Location = new System.Drawing.Point(11, 114);
+            this.boton_7.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_7.Name = "boton_7";
+            this.boton_7.Size = new System.Drawing.Size(40, 25);
+            this.boton_7.TabIndex = 4;
+            this.boton_7.Text = "7";
+            this.boton_7.UseVisualStyleBackColor = false;
+            this.boton_7.UseWaitCursor = true;
+            this.boton_7.Click += new System.EventHandler(this.btn_7);
             // 
-            // button12
+            // boton_4
             // 
-            this.button12.BackColor = System.Drawing.SystemColors.Menu;
-            this.button12.CausesValidation = false;
-            this.button12.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button12.Location = new System.Drawing.Point(11, 141);
-            this.button12.Margin = new System.Windows.Forms.Padding(1);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(40, 25);
-            this.button12.TabIndex = 8;
-            this.button12.Text = "4";
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.UseWaitCursor = true;
+            this.boton_4.BackColor = System.Drawing.SystemColors.Menu;
+            this.boton_4.CausesValidation = false;
+            this.boton_4.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_4.Location = new System.Drawing.Point(11, 141);
+            this.boton_4.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_4.Name = "boton_4";
+            this.boton_4.Size = new System.Drawing.Size(40, 25);
+            this.boton_4.TabIndex = 8;
+            this.boton_4.Text = "4";
+            this.boton_4.UseVisualStyleBackColor = false;
+            this.boton_4.UseWaitCursor = true;
+            this.boton_4.Click += new System.EventHandler(this.btn_4);
             // 
-            // button5
+            // boton_suma
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button5.CausesValidation = false;
-            this.button5.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button5.Location = new System.Drawing.Point(136, 168);
-            this.button5.Margin = new System.Windows.Forms.Padding(1);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(40, 25);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "➕";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.UseWaitCursor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.boton_suma.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.boton_suma.CausesValidation = false;
+            this.boton_suma.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_suma.Location = new System.Drawing.Point(136, 168);
+            this.boton_suma.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_suma.Name = "boton_suma";
+            this.boton_suma.Size = new System.Drawing.Size(40, 25);
+            this.boton_suma.TabIndex = 7;
+            this.boton_suma.Text = "➕";
+            this.boton_suma.UseVisualStyleBackColor = false;
+            this.boton_suma.UseWaitCursor = true;
             // 
-            // button6
+            // boton_3
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.Menu;
-            this.button6.CausesValidation = false;
-            this.button6.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button6.Location = new System.Drawing.Point(95, 168);
-            this.button6.Margin = new System.Windows.Forms.Padding(1);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(40, 25);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "3";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.UseWaitCursor = true;
+            this.boton_3.BackColor = System.Drawing.SystemColors.Menu;
+            this.boton_3.CausesValidation = false;
+            this.boton_3.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_3.Location = new System.Drawing.Point(95, 168);
+            this.boton_3.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_3.Name = "boton_3";
+            this.boton_3.Size = new System.Drawing.Size(40, 25);
+            this.boton_3.TabIndex = 6;
+            this.boton_3.Text = "3";
+            this.boton_3.UseVisualStyleBackColor = false;
+            this.boton_3.UseWaitCursor = true;
+            this.boton_3.Click += new System.EventHandler(this.btn_3);
             // 
-            // button7
+            // boton_2
             // 
-            this.button7.BackColor = System.Drawing.SystemColors.Menu;
-            this.button7.CausesValidation = false;
-            this.button7.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button7.Location = new System.Drawing.Point(53, 168);
-            this.button7.Margin = new System.Windows.Forms.Padding(1);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(40, 25);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "2";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.UseWaitCursor = true;
+            this.boton_2.BackColor = System.Drawing.SystemColors.Menu;
+            this.boton_2.CausesValidation = false;
+            this.boton_2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_2.Location = new System.Drawing.Point(53, 168);
+            this.boton_2.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_2.Name = "boton_2";
+            this.boton_2.Size = new System.Drawing.Size(40, 25);
+            this.boton_2.TabIndex = 5;
+            this.boton_2.Text = "2";
+            this.boton_2.UseVisualStyleBackColor = false;
+            this.boton_2.UseWaitCursor = true;
+            this.boton_2.Click += new System.EventHandler(this.btn_2);
             // 
-            // button8
+            // boton_1
             // 
-            this.button8.BackColor = System.Drawing.SystemColors.Menu;
-            this.button8.CausesValidation = false;
-            this.button8.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button8.Location = new System.Drawing.Point(11, 168);
-            this.button8.Margin = new System.Windows.Forms.Padding(1);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(40, 25);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "1";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.UseWaitCursor = true;
+            this.boton_1.BackColor = System.Drawing.SystemColors.Menu;
+            this.boton_1.CausesValidation = false;
+            this.boton_1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_1.Location = new System.Drawing.Point(11, 168);
+            this.boton_1.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_1.Name = "boton_1";
+            this.boton_1.Size = new System.Drawing.Size(40, 25);
+            this.boton_1.TabIndex = 4;
+            this.boton_1.Text = "1";
+            this.boton_1.UseVisualStyleBackColor = false;
+            this.boton_1.UseWaitCursor = true;
+            this.boton_1.Click += new System.EventHandler(this.btn_1);
             // 
-            // button4
+            // boton_igual
             // 
-            this.button4.BackColor = System.Drawing.Color.Tan;
-            this.button4.CausesValidation = false;
-            this.button4.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(137, 195);
-            this.button4.Margin = new System.Windows.Forms.Padding(1);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(39, 25);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "=";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.UseWaitCursor = true;
+            this.boton_igual.BackColor = System.Drawing.Color.Tan;
+            this.boton_igual.CausesValidation = false;
+            this.boton_igual.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_igual.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.boton_igual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boton_igual.Location = new System.Drawing.Point(137, 195);
+            this.boton_igual.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_igual.Name = "boton_igual";
+            this.boton_igual.Size = new System.Drawing.Size(39, 25);
+            this.boton_igual.TabIndex = 3;
+            this.boton_igual.Text = "=";
+            this.boton_igual.UseVisualStyleBackColor = false;
+            this.boton_igual.UseWaitCursor = true;
             // 
-            // button3
+            // boton_coma
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button3.CausesValidation = false;
-            this.button3.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button3.Location = new System.Drawing.Point(95, 195);
-            this.button3.Margin = new System.Windows.Forms.Padding(1);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(40, 25);
-            this.button3.TabIndex = 2;
-            this.button3.Text = ",";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.UseWaitCursor = true;
+            this.boton_coma.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.boton_coma.CausesValidation = false;
+            this.boton_coma.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_coma.Location = new System.Drawing.Point(95, 195);
+            this.boton_coma.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_coma.Name = "boton_coma";
+            this.boton_coma.Size = new System.Drawing.Size(40, 25);
+            this.boton_coma.TabIndex = 2;
+            this.boton_coma.Text = ",";
+            this.boton_coma.UseVisualStyleBackColor = false;
+            this.boton_coma.UseWaitCursor = true;
             // 
-            // button2
+            // boton_0
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Menu;
-            this.button2.CausesValidation = false;
-            this.button2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button2.Location = new System.Drawing.Point(11, 195);
-            this.button2.Margin = new System.Windows.Forms.Padding(1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 25);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "0";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.UseWaitCursor = true;
+            this.boton_0.BackColor = System.Drawing.SystemColors.Menu;
+            this.boton_0.CausesValidation = false;
+            this.boton_0.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_0.Location = new System.Drawing.Point(11, 195);
+            this.boton_0.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_0.Name = "boton_0";
+            this.boton_0.Size = new System.Drawing.Size(82, 25);
+            this.boton_0.TabIndex = 1;
+            this.boton_0.Text = "0";
+            this.boton_0.UseVisualStyleBackColor = false;
+            this.boton_0.UseWaitCursor = true;
+            this.boton_0.Click += new System.EventHandler(this.btn_0);
             // 
-            // button1
+            // boton_negacion
             // 
-            this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button1.CausesValidation = false;
-            this.button1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button1.Location = new System.Drawing.Point(11, 87);
-            this.button1.Margin = new System.Windows.Forms.Padding(1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 25);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "+/-";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.UseWaitCursor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.boton_negacion.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.boton_negacion.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.boton_negacion.CausesValidation = false;
+            this.boton_negacion.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_negacion.Location = new System.Drawing.Point(11, 87);
+            this.boton_negacion.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_negacion.Name = "boton_negacion";
+            this.boton_negacion.Size = new System.Drawing.Size(40, 25);
+            this.boton_negacion.TabIndex = 0;
+            this.boton_negacion.Text = "+/-";
+            this.boton_negacion.UseVisualStyleBackColor = false;
+            this.boton_negacion.UseWaitCursor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(605, 388);
+            this.ClientSize = new System.Drawing.Size(362, 388);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -403,27 +406,27 @@ namespace Calculadora
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Label result;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button boton_negacion;
+        private System.Windows.Forms.Button boton_igual;
+        private System.Windows.Forms.Button boton_coma;
+        private System.Windows.Forms.Button boton_0;
+        private System.Windows.Forms.Button boton_resta;
+        private System.Windows.Forms.Button boton_6;
+        private System.Windows.Forms.Button boton_5;
+        private System.Windows.Forms.Button boton_4;
+        private System.Windows.Forms.Button boton_suma;
+        private System.Windows.Forms.Button boton_3;
+        private System.Windows.Forms.Button boton_2;
+        private System.Windows.Forms.Button boton_1;
+        private System.Windows.Forms.Button boton_multi;
+        private System.Windows.Forms.Button boton_9;
+        private System.Windows.Forms.Button boton_8;
+        private System.Windows.Forms.Button boton_7;
+        private System.Windows.Forms.Label labelResult;
+        private System.Windows.Forms.Label labelContador;
+        private System.Windows.Forms.Button boton_div;
+        private System.Windows.Forms.Button boton_delete;
+        private System.Windows.Forms.Button boton_clear;
     }
 }
 
