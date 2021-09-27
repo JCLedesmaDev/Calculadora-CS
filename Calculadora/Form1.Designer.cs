@@ -30,7 +30,7 @@ namespace Calculadora
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.boton_div = new System.Windows.Forms.Button();
+            this.boton_division = new System.Windows.Forms.Button();
             this.boton_delete = new System.Windows.Forms.Button();
             this.boton_clear = new System.Windows.Forms.Button();
             this.labelContador = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@ namespace Calculadora
             this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.boton_div);
+            this.panel1.Controls.Add(this.boton_division);
             this.panel1.Controls.Add(this.boton_delete);
             this.panel1.Controls.Add(this.boton_clear);
             this.panel1.Controls.Add(this.labelContador);
@@ -81,26 +81,27 @@ namespace Calculadora
             this.panel1.Controls.Add(this.boton_coma);
             this.panel1.Controls.Add(this.boton_0);
             this.panel1.Controls.Add(this.boton_negacion);
-            this.panel1.Location = new System.Drawing.Point(121, 115);
+            this.panel1.Location = new System.Drawing.Point(64, 28);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(189, 236);
+            this.panel1.Size = new System.Drawing.Size(189, 233);
             this.panel1.TabIndex = 0;
             this.panel1.UseWaitCursor = true;
             // 
-            // boton_div
+            // boton_division
             // 
-            this.boton_div.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.boton_div.CausesValidation = false;
-            this.boton_div.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.boton_div.Location = new System.Drawing.Point(136, 87);
-            this.boton_div.Margin = new System.Windows.Forms.Padding(1);
-            this.boton_div.Name = "boton_div";
-            this.boton_div.Size = new System.Drawing.Size(40, 25);
-            this.boton_div.TabIndex = 18;
-            this.boton_div.Text = "➗";
-            this.boton_div.UseVisualStyleBackColor = false;
-            this.boton_div.UseWaitCursor = true;
+            this.boton_division.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.boton_division.CausesValidation = false;
+            this.boton_division.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.boton_division.Location = new System.Drawing.Point(136, 87);
+            this.boton_division.Margin = new System.Windows.Forms.Padding(1);
+            this.boton_division.Name = "boton_division";
+            this.boton_division.Size = new System.Drawing.Size(40, 25);
+            this.boton_division.TabIndex = 18;
+            this.boton_division.Text = "➗";
+            this.boton_division.UseVisualStyleBackColor = false;
+            this.boton_division.UseWaitCursor = true;
+            this.boton_division.Click += new System.EventHandler(this.btn_division);
             // 
             // boton_delete
             // 
@@ -148,7 +149,6 @@ namespace Calculadora
             this.labelResult.Name = "labelResult";
             this.labelResult.Size = new System.Drawing.Size(163, 18);
             this.labelResult.TabIndex = 13;
-            this.labelResult.Text = "Resultado";
             this.labelResult.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.labelResult.UseWaitCursor = true;
             // 
@@ -165,6 +165,7 @@ namespace Calculadora
             this.boton_multi.Text = "✖";
             this.boton_multi.UseVisualStyleBackColor = false;
             this.boton_multi.UseWaitCursor = true;
+            this.boton_multi.Click += new System.EventHandler(this.btn_multipli);
             // 
             // boton_resta
             // 
@@ -179,6 +180,7 @@ namespace Calculadora
             this.boton_resta.Text = "➖";
             this.boton_resta.UseVisualStyleBackColor = false;
             this.boton_resta.UseWaitCursor = true;
+            this.boton_resta.Click += new System.EventHandler(this.btn_resta);
             // 
             // boton_9
             // 
@@ -283,6 +285,7 @@ namespace Calculadora
             this.boton_suma.Text = "➕";
             this.boton_suma.UseVisualStyleBackColor = false;
             this.boton_suma.UseWaitCursor = true;
+            this.boton_suma.Click += new System.EventHandler(this.btn_suma);
             // 
             // boton_3
             // 
@@ -339,11 +342,12 @@ namespace Calculadora
             this.boton_igual.Location = new System.Drawing.Point(137, 195);
             this.boton_igual.Margin = new System.Windows.Forms.Padding(1);
             this.boton_igual.Name = "boton_igual";
-            this.boton_igual.Size = new System.Drawing.Size(39, 25);
+            this.boton_igual.Size = new System.Drawing.Size(38, 25);
             this.boton_igual.TabIndex = 3;
             this.boton_igual.Text = "=";
             this.boton_igual.UseVisualStyleBackColor = false;
             this.boton_igual.UseWaitCursor = true;
+            this.boton_igual.Click += new System.EventHandler(this.btn_igual);
             // 
             // boton_coma
             // 
@@ -394,7 +398,7 @@ namespace Calculadora
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(362, 388);
+            this.ClientSize = new System.Drawing.Size(317, 294);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -424,7 +428,7 @@ namespace Calculadora
         private System.Windows.Forms.Button boton_7;
         private System.Windows.Forms.Label labelResult;
         private System.Windows.Forms.Label labelContador;
-        private System.Windows.Forms.Button boton_div;
+        private System.Windows.Forms.Button boton_division;
         private System.Windows.Forms.Button boton_delete;
         private System.Windows.Forms.Button boton_clear;
     }
