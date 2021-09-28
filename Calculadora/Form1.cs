@@ -39,6 +39,7 @@ namespace Calculadora
         /// 2) Metodo que permite plasmar el contenido del "labelContador", en el "labelResultado" junto al signo elegido.
         private void changeLabelResult( string BtnOperador)
         {
+
             /// Se valida aca, cuando ingresamos el primer numero de la primera operacion
             if (acumulador == "")
             {
@@ -48,17 +49,18 @@ namespace Calculadora
                 /// Convertimos el primer valor en numero flotante
                 /// y lo almacenamos (para realizar operacion)
                 primerNumero = System.Convert.ToSingle(contador);
-
+                
                 /// Mostramos en pantalla.
                 labelResult.Text = acumulador;
                 contador = ""; /// Permite escribir nuevamente un numero de 0.
             }
 
             /// En caso de que hayamos hehco una operacion y queramos continuar
-            else if (acumulador != "" && resultado != "") 
+            else if (acumulador != "" && resultado != "")
             {
-                labelResult.Text = resultado + " " + BtnOperador;
+              labelResult.Text = resultado + " " + BtnOperador;
             }
+
 
             /// Se valida aca, cuando ingresamos el segundo numero de la primera operacion
             else
@@ -103,28 +105,42 @@ namespace Calculadora
         /// la operacion en cuestion.
         private void btn_igual(object sender, EventArgs e)
         {
-            changeLabelResult(boton_igual.Text);
-            
-            if (resultado == "")
-            { /// Se ejecuta cuando obtenemos un primer resultado.
-                calculateOperation(
-                    operador, 
-                    primerNumero, 
-                    segundoNumero
-                );
-            }
-            else
-            { /// Se ejecuta cuando sumamos un valor al resultado ya obtenido.
-                labelResult.Text = resultado + " " + operador + " " + contador + " " + boton_igual.Text ;
 
-                calculateOperation(
-                    operador, 
-                    System.Convert.ToSingle(resultado),
-                    System.Convert.ToSingle(contador)
-                );
+            try
+            {
+                /// Si no escribimos nada, no se ejecuta el igual.
+                if (primerNumero == 0 && operador == "")
+                {
+                    throw new Exception("Ingrese 2 numeros y operador.");
+                }
+
+                /// Caso de que hayamos escrito un numero y un operador, SI.
+                changeLabelResult(boton_igual.Text);
+                if (resultado == "")
+                { /// Se ejecuta cuando obtenemos un primer resultado.
+                    calculateOperation(
+                        operador,
+                        primerNumero,
+                        segundoNumero
+                    );
+                }
+                else
+                { /// Se ejecuta cuando sumamos un valor al resultado ya obtenido.
+                    labelResult.Text = resultado + " " + operador + " " + contador + " " + boton_igual.Text;
+                    calculateOperation(
+                        operador,
+                        System.Convert.ToSingle(resultado),
+                        System.Convert.ToSingle(contador)
+                    );
+                }
+                contador = ""; /// Permite escribir nuevamente un numero de 0.
+                labelContador.Text = resultado;
+
             }
-            contador = ""; /// Permite escribir nuevamente un numero de 0.
-            labelContador.Text = resultado;
+              catch (Exception error)
+            {
+                 labelResult.Text = error.Message.ToString();
+            }
         }
 
 
