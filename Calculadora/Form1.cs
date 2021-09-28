@@ -135,7 +135,7 @@ namespace Calculadora
         /// la operacion en si.
         private void btn_suma(object sender, EventArgs e)
         {
-           if (labelContador.Text != "0" ) ///Evitamos poder poner primero un operador.
+           if (labelContador.Text != "0") ///Evitamos poder poner primero un operador.
            {
               changeLabelResult(boton_suma.Text);
               operador = boton_suma.Text;
@@ -239,6 +239,10 @@ namespace Calculadora
                 contador = contador.Remove(contador.Length - 1);
                 labelContador.Text = contador;
             }
+            if (labelContador.Text == "")
+            {
+                labelContador.Text = "0";
+            }
         }
        
         private void btn_clear(object sender, EventArgs e)
@@ -257,15 +261,18 @@ namespace Calculadora
 
         private void btn_negacion(object sender, EventArgs e)
         {
-            if (!contador.Contains("-")) //Si nuestro contador no posee el "-", permite agregarselo
+            if (labelContador.Text != "0") //Si nuestro label esta en "0". no pondra signo -
             {
-                contador = "-" + contador;
+                if (!contador.Contains("-")) //Si nuestro contador NO posee el "-", permite agregarselo                         ////if (!contador.Contains("-")) 
+                {
+                    contador = "-" + contador;
+                }
+                else
+                {// caso contrario, se lo quita.
+                    contador = contador.Replace("-", "");
+                }
+                labelContador.Text = contador;
             }
-            else
-            {// caso contrario, se lo quita.
-                contador = contador.Replace("-", "");
-            }
-            labelContador.Text = contador;
         }
     }
 }
