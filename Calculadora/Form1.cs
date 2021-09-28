@@ -83,7 +83,7 @@ namespace Calculadora
                     resultado = System.Convert.ToString(numero1 + numero2);
                     break;
                 case "➖":
-                    resultado = System.Convert.ToString(numero1 - numero2);
+                    resultado = System.Convert.ToString( numero1 - numero2);
                     break;
 
                 case "✖":
@@ -98,7 +98,6 @@ namespace Calculadora
                     break;
             }
         }
-
 
         /// 3) Dicho boton, ejecuta el METODO GLOBAL "changeLabelResult" para realizar toda
         /// la operacion en cuestion.
@@ -136,38 +135,38 @@ namespace Calculadora
         /// la operacion en si.
         private void btn_suma(object sender, EventArgs e)
         {
-           //if (contador.Length > 1 ) ///Evitamos poder poner primero un operador.
-           //{
+           if (labelContador.Text != "0" ) ///Evitamos poder poner primero un operador.
+           {
               changeLabelResult(boton_suma.Text);
               operador = boton_suma.Text;
-           //}
+           }
         }
 
         private void btn_resta(object sender, EventArgs e)
         {
-            //if (contador != "") ///Evitamos poder poner primero un operador.
-            //{
+            if (labelContador.Text != "0") ///Evitamos poder poner primero un operador.
+            {
               changeLabelResult(boton_resta.Text);
               operador = boton_resta.Text;
-            //}
+            }
         }
 
         private void btn_multipli(object sender, EventArgs e)
         {
-            //if (contador != "") ///Evitamos poder poner primero un operador.
-            //{
+            if (labelContador.Text != "0") ///Evitamos poder poner primero un operador.
+            {
                 changeLabelResult(boton_multi.Text);
                 operador = boton_multi.Text;
-            //}
+            }
         }
 
         private void btn_division(object sender, EventArgs e)
         {
-            //if (contador != "") ///Evitamos poder poner primero un operador.
-           // {
+            if (labelContador.Text != "0") ///Evitamos poder poner primero un operador.
+            {
                 changeLabelResult(boton_division.Text);
                 operador = boton_division.Text;
-            //}
+            }
         }
 
 
@@ -241,6 +240,7 @@ namespace Calculadora
                 labelContador.Text = contador;
             }
         }
+       
         private void btn_clear(object sender, EventArgs e)
         {
             contador = "";
@@ -248,10 +248,24 @@ namespace Calculadora
 
             primerNumero = 0;
             segundoNumero = 0;
+
             operador = "";
             resultado = "";
             labelContador.Text = "0";
             labelResult.Text = "";
+        }
+
+        private void btn_negacion(object sender, EventArgs e)
+        {
+            if (!contador.Contains("-")) //Si nuestro contador no posee el "-", permite agregarselo
+            {
+                contador = "-" + contador;
+            }
+            else
+            {// caso contrario, se lo quita.
+                contador = contador.Replace("-", "");
+            }
+            labelContador.Text = contador;
         }
     }
 }

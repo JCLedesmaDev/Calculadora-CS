@@ -396,6 +396,7 @@ namespace Calculadora
             this.boton_negacion.Text = "+/-";
             this.boton_negacion.UseVisualStyleBackColor = false;
             this.boton_negacion.UseWaitCursor = true;
+            this.boton_negacion.Click += new System.EventHandler(this.btn_negacion);
             // 
             // Form1
             // 
