@@ -51,7 +51,9 @@ namespace Calculadora
             this.boton_coma = new System.Windows.Forms.Button();
             this.boton_0 = new System.Windows.Forms.Button();
             this.boton_negacion = new System.Windows.Forms.Button();
+            this.dataTableOperations = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTableOperations)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -398,16 +400,27 @@ namespace Calculadora
             this.boton_negacion.UseWaitCursor = true;
             this.boton_negacion.Click += new System.EventHandler(this.btn_negacion);
             // 
+            // dataTableOperations
+            // 
+            this.dataTableOperations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataTableOperations.Location = new System.Drawing.Point(256, 28);
+            this.dataTableOperations.Name = "dataTableOperations";
+            this.dataTableOperations.Size = new System.Drawing.Size(116, 233);
+            this.dataTableOperations.TabIndex = 1;
+            this.dataTableOperations.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(317, 294);
+            this.ClientSize = new System.Drawing.Size(580, 334);
+            this.Controls.Add(this.dataTableOperations);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataTableOperations)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -436,6 +449,7 @@ namespace Calculadora
         private System.Windows.Forms.Button boton_division;
         private System.Windows.Forms.Button boton_delete;
         private System.Windows.Forms.Button boton_clear;
+        private System.Windows.Forms.DataGridView dataTableOperations;
     }
 }
 

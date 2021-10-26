@@ -7,22 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Calculadora.ClassModels
 
 namespace Calculadora
 {
     public partial class Form1 : Form {
+
+
+        /* Instancia de clases */
+        public ListaOperacionesModel ListaOperaciones { get;set; } = new ListaOperacionesModel();
+        public OperacionModel Operacion { get; set;} = new OperacionModel();
+
+
         public Form1(){
             InitializeComponent();
         }
+
+
 
         /// VARIABLES GLOBALES
         string contador = "";
         string acumulador = "";
 
-        float primerNumero = 0;
-        float segundoNumero = 0;
-        string operador = "";
-        string resultado = "";
+
 
 
         /// METODOS GLOBALES
@@ -76,35 +83,15 @@ namespace Calculadora
             }
         }
 
-        /// 3) Metodo que realiza la operacion en cuesiton.
-        private void calculateOperation ( string Operator, float numero1, float numero2)
-        {
-            switch (Operator)
-            {
-                case "➕":
-                    resultado = System.Convert.ToString(numero1 + numero2);
-                    break;
-                case "➖":
-                    resultado = System.Convert.ToString( numero1 - numero2);
-                    break;
 
-                case "✖":
-                    resultado = System.Convert.ToString(numero1 * numero2);
-                    break;
-
-                case "➗":
-                    resultado = System.Convert.ToString(numero1 / numero2);
-                    break;
-
-                default:
-                    break;
-            }
-        }
 
         /// 3) Dicho boton, ejecuta el METODO GLOBAL "changeLabelResult" para realizar toda
         /// la operacion en cuestion.
         private void btn_igual(object sender, EventArgs e)
         {
+
+            Operacion.primerNumero = 
+
 
             try
             {
@@ -118,6 +105,10 @@ namespace Calculadora
                 changeLabelResult(boton_igual.Text);
                 if (resultado == "")
                 { /// Se ejecuta cuando obtenemos un primer resultado.
+                    
+                        /* CAMBIAR  */
+
+
                     calculateOperation(
                         operador,
                         primerNumero,
@@ -127,6 +118,8 @@ namespace Calculadora
                 else
                 { /// Se ejecuta cuando sumamos un valor al resultado ya obtenido.
                     labelResult.Text = resultado + " " + operador + " " + contador + " " + boton_igual.Text;
+                    
+                    /* CAMBIAR  */
                     calculateOperation(
                         operador,
                         System.Convert.ToSingle(resultado),
@@ -289,6 +282,11 @@ namespace Calculadora
                 }
                 labelContador.Text = contador;
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
